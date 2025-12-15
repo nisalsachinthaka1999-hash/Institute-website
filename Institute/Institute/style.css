@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding: 0;
+    
+
+
+}
+
+.container{
+    height: 70vh;
+    width: 100%;
+    animation: animate 40s ease-in-out infinite;
+
+}
+
+@keyframes animate{
+    0%,100%{
+        background-image: url(c1.png);
+        background-repeat: no-repeat;
+        background-size:cover ;
+        
+
+    
+    }
+    25%{
+        background-image: url(c2.png);
+        background-repeat: no-repeat;
+    
+    }
+    50%{
+        background-image: url(c3.png);
+        background-repeat: no-repeat;
+    
+    }
+}
+.navbar{
+    height: 80px;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+}
+.logo{
+    width: 200px;
+    height: auto;
+    
+}
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: burlywood;
+    font-size: 20px;
+    padding: 6px 13px;
+}
+.navbar ul li a:hover{
+    color: rgb(243, 237, 237);
+    transition: 1s;
+
+}
+.container.content{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    text-align: center;   
+}
+.navbar button{
+   background-color: rgb(201, 169, 64);
+   margin-left: 10px;
+   border-radius: 10px;
+   padding: 10px;
+   width: 90px;  
+}
+.navbar button a{
+    color: #0c0b0b;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.navbar button:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.5);
+    color: rgb(104, 85, 172);
+
+}
+
+
+.content h1{
+    font-size: 100px;
+    color: rgb(67, 88, 184);
+    text-align: center;
+    margin: 35px 700px;
+
+    
+
+
+}
+.content h2{
+    font-size: 60px;
+    color: rgb(85, 112, 145);
+    text-align: center;
+
+}
+.about{
+    background-color: rgb(240, 196, 139);
+}
+.about-1{
+    margin: 30px;
+    padding: 5px;
+
+}
+.about-1 h1{
+    text-align: center;
+    color: rgb(233, 205, 47);
+    font-weight: bold;
+    font-size: 30px;
+}
+.about-1 p{
+    text-align: center;
+    padding: 3px;
+    color: rgb(9, 9, 128);
+    font-size: 20px;
+}
+.footer{
+    background: #212226;
+    padding: 50px;
+    text-align: center;
+
+}
+.footer p{
+    color: #fff;
+}
+.sci{
+    margin-top: 15px;
+    display: flex;
+
+}
+.sci li{
+    list-style: none;
+    margin-right: 15px;
+    
+
+}
+.sci li a{
+    color: rgb(10, 10, 75);
+    font-size: 1.5em;
+    color: rgb(192, 190, 190);
+}
+.sci li a:hover{
+    color: rgb(238, 182, 109);
+}
+
+

@@ -1,0 +1,91 @@
+body{
+    background-image: url(bac.png);
+    background-size:cover ;
+    height: 70vh;
+    width: 90%;
+    
+    
+}
+h1{
+    font-size: 60px;
+    color: rgb(13, 13, 104);
+    text-align: center;
+}
+.form {
+    
+        display: flex;
+        flex-direction: column;
+        height: 750px;
+        width: 700px;
+        border: 1px solid black;
+        align-items: center;
+        margin: auto;
+        margin-top: 15px;
+        background-color: rgb(69, 84, 88);
+        box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+        border-radius: 25px;
+}
+.box{
+    padding: 10px;
+    margin: 5px;
+    width: 60%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(187, 198, 236, 0.5);
+    box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+    color: rgb(248, 247, 247);
+    font-size: 1rem;
+} 
+.box:hover{
+    background-color: rgb(226, 212, 80);
+}
+.form img {
+ height: 500px;
+ width: 500px;
+ margin-top: -60px;
+ margin-bottom: -40px;    
+} 
+.form label {
+    color: rgb(206, 176, 45);
+    font-size: 22px;
+    
+}  
+.form select {
+    padding: 7px;
+    margin:5px;
+    width: 20%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(187, 198, 236, 0.5);
+    box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+    color: rgb(99, 98, 98);
+    font-size: 1rem;
+
+}
+.form select:hover{
+    color: rgb(226, 212, 80);
+}
+.form a{
+    padding: 10px 20px;
+    margin-top: 50px;
+    width: 50%;
+    background-color: rgba(10, 41, 109, 0.5);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.form a:hover{
+    cursor: pointer;
+    background-color: rgba(224, 222, 231, 0.5);
+    color: rgb(17, 17, 138);
+    
+}
+.form ::placeholder{
+    
+    text-align: center;
+}

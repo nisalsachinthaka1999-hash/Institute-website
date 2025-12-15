@@ -1,0 +1,50 @@
+body{
+    background-image: url(bac.png);
+    background-size:cover ;
+    height: 80vh;
+    width: 98%;
+
+}
+h1{
+    text-align: center;
+    color: rgb(177, 152, 15);
+    font-size: 50px;
+}
+
+input[type="file"] {
+    display: block;
+    position: relative;
+    background-color: rgb(15, 10, 87);
+    color: white;
+    font-size: 1.12em;
+    font-weight: 500;
+    text-align: center;
+    width: 18.75em;
+    padding: 1.12em 0;
+    margin: auto;
+    border-radius: 0.31em;
+    cursor: pointer;
+
+}
+
+
+#num-of-files {
+    font-weight: 400;
+    text-align: center;
+    margin: 1,25em 0 1.87em 0;
+}
+ul {
+    list-style-type: none;
+    font-size: 20px;
+    color: rgb(114, 103, 7);
+}
+.container li {
+    font-weight: 500;
+    background-color: bisque;
+    color: rgb(153, 134, 24);
+    margin-bottom: 1em;
+    padding: 1.1em 1em;
+    border-radius: 0.3em;
+    display: flex;
+    justify-content: space-between;
+}

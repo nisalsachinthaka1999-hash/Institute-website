@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="tutorial.css">
+    
+</head>
+<body>
+    <h1>Tutorial</h1>
+
+    <!-- File input -->
+    <input type="file"  id="file-input" multiple>
+    <p id="num-of-files">0 Files Selected</p>
+
+    <!-- Display the list of uploaded files -->
+    <ul id="file-list"></ul>
+
+    <script>
+        let fileInput = document.getElementById("file-input");
+        let fileList = document.getElementById("file-list");
+        let numOfFiles = document.getElementById("num-of-files");
+
+        // Function to save file details to local storage
+        function saveFilesToLocalStorage(files) {
+            let storedFiles = JSON.parse(localStorage.getItem('uploadedFiles') || "[]"); // Get existing files from local storage
+
+            for (let i = 0; i < files.length; i++) {
+                let file = files[i];
+                let reader = new FileReader();
+
+                reader.onload = (function(file) {
+                    return function(e) {
+                        storedFiles.push({
+                            name: file.name,
+                            size: file.size,
+                            content: e.target.result // base64 content of the file
+                        });
+
+                        // Save the updated list back to local storage
+                        localStorage.setItem('uploadedFiles', JSON.stringify(storedFiles));
+
+                        // Display the files after each file is saved
+                        displayFilesFromLocalStorage();
+                    };
+                })(file);
+
+                reader.readAsDataURL(file); // Read file as base64 URL
+            }
+        }
+
+        // Function to display files from local storage
+        function displayFilesFromLocalStorage() {
+            fileList.innerHTML = "";  // Clear the current display
+            let files = JSON.parse(localStorage.getItem('uploadedFiles') || "[]");
+
+            numOfFiles.textContent = `${files.length} Files Saved`;  // Update the file count display
+
+            files.forEach(file => {
+                let listItem = document.createElement("li");
+                let fileSize = (file.size / 1024).toFixed(1);  // File size in KB
+                let fileSizeDisplay = fileSize >= 1024 ? `${(fileSize / 1024).toFixed(1)} MB` : `${fileSize} KB`;
+
+                // Create file details
+                listItem.innerHTML = `
+                    <p><strong>${file.name}</strong> - ${fileSizeDisplay}</p>
+                `;
+
+                // Create download link
+                let downloadLink = document.createElement("a");
+                downloadLink.href = file.content; // Use base64 file content
+                downloadLink.download = file.name;
+                downloadLink.textContent = "Download";
+                downloadLink.style.marginRight = "10px";  // Optional styling
+
+                // Append download link to the list item
+                listItem.appendChild(downloadLink);
+
+                // Add the list item to the file list
+                fileList.appendChild(listItem);
+            });
+        }
+
+        // Load and display saved files when the page loads
+        window.onload = function() {
+            displayFilesFromLocalStorage();
+        };
+
+        // Event listener for file input
+        fileInput.addEventListener("change", () => {
+            saveFilesToLocalStorage(fileInput.files); // Save files to local storage
+        });
+    </script>
+</body>
+</html>

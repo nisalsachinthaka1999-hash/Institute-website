@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding: 0;
+    
+    background-image: url(bac.png);
+    background-repeat: no-repeat;
+    background-size:cover ;
+
+
+}
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+.main-top{
+    display: flex;
+    width: 100%;
+}
+.main-top h1{
+    font-size: 50px;
+    text-align: center;
+    color: darkblue;
+    padding: 20px 600px;
+}
+.main .users{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+}
+.users .card{
+    width: 20%;
+    margin: 20px;
+    background: #f7f8c5;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    align-items: center;
+}
+.users .card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.users .card button{
+    width: 100%;
+    margin-top: 8px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgb(126, 122, 94);
+    border: blue;
+    font-size: 20px;
+    color:yellow;
+}
+.users .card button:hover{
+    background: rgb(244, 244, 248);
+    color: blue;
+    transition: 0.5s;
+}
+.users .card h2{
+    font-size: 30px;
+    color: rgb(6, 6, 107);
+}
+.users .card h3{
+    font-size: 25px;
+    color: rgb(61, 134, 61);
+}
+.main .users1{
+    display: flex;
+    width: 100%;
+}
+.users1 .card{
+    width: 20%;
+    margin: 20px;
+    background: #f7f8c5;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+.users1 .card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.users1 .card button{
+    width: 100%;
+    margin-top: 8px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgb(126, 122, 94);
+    border: blue;
+    font-size: 20px;
+    color:yellow;
+}
+.users1 .card button:hover{
+    background: rgb(244, 244, 248);
+    color: blue;
+    transition: 0.5s;
+}
+.users1 .card h2{
+    font-size: 30px;
+    color: rgb(6, 6, 107);
+}
+.users1 .card h3{
+    font-size: 25px;
+    color: rgb(61, 134, 61);
+}

@@ -1,0 +1,122 @@
+body{
+    background-image: url(bac.png);
+    background-size:cover ;
+    height: 80vh;
+    width: 98%;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    align-items: center;
+    margin: auto;
+    margin-top: -215px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+.form h1{
+    color: white;
+    font-size: 2rem;
+    border-bottom: 4px solid rgba(255,255,255,0.5);
+    margin: 50px;
+}
+.form p{
+    font-size: 1.2rem;
+    color: rgb(243, 243, 247);
+}
+.form p a{
+    color: rgb(238, 224, 36);
+}    
+.box{
+    padding: 12px;
+    margin: 20px;
+    width: 65%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1rem;
+}
+#submit{
+    padding: 10px 20px;
+    margin-top: 50px;
+    width: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.5);
+    color: rgb(32, 7, 119);
+
+}
+.placeholder{
+    color: white;
+    opacity: 0.7;
+}
+.logo{
+    width: 500px;
+    height: auto;
+} 
+.box1{
+    padding: 12px;
+    margin: 20px 100px;
+    width: 40%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(245, 239, 239, 0.5);
+    box-shadow: inset -3px -3px rgba(255, 254, 254, 0.849);
+    color: rgb(109, 107, 19);
+    font-size: 1.2rem;
+    
+    
+    
+    
+
+
+} 
+.box1 div span{
+    min-width: 70px;
+    height: 20px;
+    color: rgb(66, 12, 165);
+    display: flex;
+
+
+    
+}
+.sci{
+    margin-top: 15px;
+    display: flex;
+
+}
+.sci li{
+    list-style: none;
+    margin-right: 15px;
+    
+
+}
+.sci li a{
+    color: rgb(10, 10, 75);
+    font-size: 1.5em;
+    color: rgb(192, 190, 190);
+}
+.sci li a:hover{
+    color: rgb(238, 182, 109);
+}
+
+
+
+
+

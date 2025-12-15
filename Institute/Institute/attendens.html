@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Attendance</title>
+    <link rel="stylesheet" type="text/css" href="attendenns.css">
+    <script>
+        function toggleAdminSection() {
+            const password = prompt("Enter admin password:");
+            if (password === "admin123") {
+                document.getElementById('admin-section').style.display = 'block';
+            } else {
+                alert("Incorrect password!");
+            }
+        }
+
+        function submitStudentForm(event) {
+            event.preventDefault();
+
+            const studentId = document.getElementById('student-id').value;
+            const studentName = document.getElementById('student-name').value;
+            const studentSubject = document.getElementById('student-subject').value;
+            const studentGrade = document.getElementById('student-grade').value;
+
+
+            const newRow = `
+                <tr>
+                    <td>${studentId}</td>
+                    <td>${studentName}</td>
+                    <td>${studentSubject}</td>
+                    <td>${studentGrade}</td>
+                    <td><button>View</button></td>
+                </tr>
+            `;
+
+    
+            document.getElementById('students-table-body').insertAdjacentHTML('beforeend', newRow);
+
+    
+            document.getElementById('student-form').reset();
+            alert("Student data submitted!");
+        }
+    </script>
+</head>
+<body>
+    <section class="attendenns">
+        <div class="attendenns-list">
+            <h1>Attendance List</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                        <th>All Attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="students-table-body">
+                    <tr>
+                        <td> S7-1234</td>
+                        <td>Amali Perera</td>
+                        <td>Sinhala</td>
+                        <td> Grade 07</td>
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sc10-5432</td>
+                        <td>Nimesh Silva</td>
+                        <td>Science</td>
+                        <td>Grade 10</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>M8-4567</td>
+                        <td>Daham Pathirana</td>
+                        <td>Methematics</td>
+                        <td>Grade 08</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>E6-9876</td>
+                        <td>nethum Perera</td>
+                        <td>English</td>
+                        <td>Grade 06</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>T11-9534</td>
+                        <td>Sithumi Nimesha</td>
+                        <td>Tamil</td>
+                        <td>Grade 11</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sc8-0934</td>
+                        <td>Kalum Sathsara</td>
+                        <td>Science</td>
+                        <td>Grade 08</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>I9-1298</td>
+                        <td>Pthum Thennakoon</td>
+                        <td>ICT</td>
+                        <td>Grade 09</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>S10-9645</td>
+                        <td>Kavi Bagya</td>
+                        <td>Sinhala</td>
+                        <td>Grade 10</td>
+                       
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>M9-9312</td>
+                        <td>Piyumi Chanchala</td>
+                        <td>Methematics</td>
+                        <td>Grade 09</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>E6-1265</td>
+                        <td>Nethum Silva</td>
+                        <td>English</td>
+                        <td>Grade 06</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>I7-4378</td>
+                        <td>Nethula Hansa</td>
+                        <td>ICT</td>
+                        <td>Grade 07</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>T11-9467</td>
+                        <td>Dewmi Lakshika</td>
+                        <td>Temil</td>
+                        <td>Grade 11</td>
+                        
+                        <td><button>View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <button class="btn" onclick="toggleAdminSection()">Admin Access</button>
+
+
+    <section id="admin-section" style="display:none;">
+        <h2>Add/Edit Student</h2>
+        <form id="student-form" onsubmit="submitStudentForm(event)">
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="student-id" required><br><br>
+
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" name="student-name" required><br><br>
+
+            <label for="student-subject">Subject:</label>
+            <input type="text" id="student-subject" name="student-subject" required><br><br>
+
+            <label for="student-grade">Grade:</label>
+            <input type="text" id="student-grade" name="student-grade" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
